@@ -1,39 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import anime from "animejs";
-import { Name1nvisibilia, Nameiiiinvy, Nametaowo, NameBobbyTao, NameJiadiTao } from "./assets/nameSvgs";
-
-const names = [Name1nvisibilia, Nameiiiinvy, Nametaowo, NameBobbyTao, NameJiadiTao];
+import { Animation } from "./assets/nameSvgs";
 
 export default function Name() {
-    const [idx, setIdx] = useState(1);
-
-    const toggle = async () => {
-        // while (true) {
-            anime({
-                targets: 'path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
-                duration: 800,
-                delay: function (el, i) { return i * 80 },
-                direction: 'normal',
-            });
-            await new Promise(r => setTimeout(r, 4000));
-            anime({
-                targets: 'path',
-                strokeDashoffset: [anime.setDashoffset, 0],
-                easing: 'easeInOutSine',
-                duration: 800,
-                delay: function (el, i) { return i * 80 },
-                direction: 'reverse',
-            });
-            await new Promise(r => setTimeout(r, 3000));
-            setIdx((idx + 1) % names.length);
-        // }
+    const drawSvg = async () => {
+        anime({
+            targets: ".svgName path",
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 2000,
+            delay: function (el, i) { return i * 150 },
+            direction: 'normal'
+        });
     }
 
-    useEffect(() => {
-        toggle();
-    }, []);
+    useEffect(() => { drawSvg(); }, []);
 
-    return <div id="myname">{names[idx]()}</div>
+    return <div>
+        <Animation />
+    </div>;
 }
