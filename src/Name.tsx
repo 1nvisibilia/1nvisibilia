@@ -16,7 +16,7 @@ export default function Name() {
 
     useEffect(() => { drawSvg(); }, []);
 
-    return <div style={{ marginTop: '10em'}}>
+    return <div style={{ margin: '10em 0'}}>
         <Animation />
     </div>;
 }
