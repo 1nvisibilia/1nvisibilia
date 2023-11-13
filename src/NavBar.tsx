@@ -8,14 +8,10 @@ export default function NavBar() {
     useEffect(() => {
         setTimeout(() => {
             anime({
-                targets: "#navbar",
-                translateY: 52,
-                complete: () => {
-                    if (navBarRef.current) {
-                        navBarRef.current.style.position = "sticky"
-                        navBarRef.current.style.transform = "";
-                    }
-                }
+                targets: ".navele",
+                delay: anime.stagger(50),
+                translateY: -100,
+                opacity: 1
             });
         }, 1000);
     });
@@ -26,48 +22,48 @@ export default function NavBar() {
             rotate: "1turn",
             duration: 600,
             complete: (anim) => {
-                anim.animatables[0].target.style.transform = "";
+                anim.animatables[0].target.style.transform = "translateY(-100px)";
             }
         });
     }
 
-    return <div ref={navBarRef} id="navbar" style={{
+    return <div ref={navBarRef} style={{
         padding: "0 1em", justifyContent: "space-around", width: "34em",
-        position: "absolute", top: -52, left: 0, textAlign: "left",
-        display: "flex", alignItems: "center", overflow: "hidden", float: "left"
+        position: "sticky", top: 100, left: 0, textAlign: "left",
+        display: "flex", alignItems: "center"
     }}>
         <Tooltip title="1nvisibilia" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem1")} id="navitem1">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem1")} id="navitem1">
                 <span>🍑</span>
             </IconButton>
         </Tooltip>
-        <Divider orientation="vertical" variant="middle" flexItem />
+        <Divider className="navele" orientation="vertical" variant="middle" flexItem />
         <Tooltip title="What I am" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem2")} id="navitem2" size="large">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem2")} id="navitem2" size="large">
                 <AccountCircleTwoTone />
             </IconButton>
         </Tooltip>
-        <Divider orientation="vertical" variant="middle" flexItem />
+        <Divider className="navele" orientation="vertical" variant="middle" flexItem />
         <Tooltip title="Where I'm at" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem3")} id="navitem3" size="large">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem3")} id="navitem3" size="large">
                 <RoomTwoTone />
             </IconButton>
         </Tooltip>
-        <Divider orientation="vertical" variant="middle" flexItem />
+        <Divider className="navele" orientation="vertical" variant="middle" flexItem />
         <Tooltip title="Whom I've worked" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem4")} id="navitem4" size="large">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem4")} id="navitem4" size="large">
                 <WorkTwoTone />
             </IconButton>
         </Tooltip>
-        <Divider orientation="vertical" variant="middle" flexItem />
+        <Divider className="navele" orientation="vertical" variant="middle" flexItem />
         <Tooltip title="Where I've learned" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem5")} id="navitem5" size="large">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem5")} id="navitem5" size="large">
                 <SchoolTwoTone />
             </IconButton>
         </Tooltip>
-        <Divider orientation="vertical" variant="middle" flexItem />
+        <Divider className="navele" orientation="vertical" variant="middle" flexItem />
         <Tooltip title="What I do" arrow>
-            <IconButton onMouseEnter={() => spinIcon("navitem6")} id="navitem6" size="large">
+            <IconButton className="navele" onMouseEnter={() => spinIcon("navitem6")} id="navitem6" size="large">
                 <TerminalTwoTone />
             </IconButton>
         </Tooltip>
