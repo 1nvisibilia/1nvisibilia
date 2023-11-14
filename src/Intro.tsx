@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import SectionTitle from "./SectionTitle";
 
 const spacing = 10; // px
-const names = ["Bobby Tao", "invy", "1nvisibilia", "taowo"];
+const names = ["Bobby Tao...", "invy...", "1nvisibilia...", "taowo..."];
 
 export default function Intro() {
     const [name, setName] = useState(names[0]);
@@ -21,7 +21,14 @@ export default function Intro() {
         const intervalId = setInterval(() => {
             curIdx = (curIdx + 1) % names.length;
             setName(names[curIdx]);
-        }, 1500);
+            setTimeout(() => {
+                anime({
+                    targets: ".aliasletter",
+                    delay: anime.stagger(100),
+                    opacity: [0, 1]
+                });
+            }, 0);
+        }, 3000);
 
         return () => clearInterval(intervalId);
     }, []);
@@ -36,7 +43,11 @@ export default function Intro() {
                 <div style={{ padding: "1em" }}>
                     <p style={{ marginBottom: spacing }}>
                         This is Jiadi Tao, you might also know me as{" "}
-                        <span style={{ display: "inline-block" }}>{name}</span>...
+                        <span style={{ display: "inline-block" }}>{
+                            name.split("").map((char: string) =>
+                                <span className="aliasletter">{char}</span>
+                            )}
+                        </span>
                     </p>
                     <p style={{ marginBottom: spacing }}>
                         I am a senior computer science student @ University of Waterloo, specializing
