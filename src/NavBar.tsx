@@ -22,7 +22,7 @@ export default function NavBar() {
             rotate: "1turn",
             duration: 600,
             complete: (anim) => {
-                anim.animatables[0].target.style.transform = "translateY(-100px)";
+                anim.animatables[0].target.style.transform = "";
             }
         });
     }
