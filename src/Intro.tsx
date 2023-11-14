@@ -41,7 +41,7 @@ export default function Intro() {
                     <img id="avatar" style={{ borderRadius: "50%" }} src="./avatar.png" loading="lazy" />
                 </div>
                 <div style={{ padding: "1em" }}>
-                    <p style={{ marginBottom: spacing }}>
+                    <p style={{ marginBottom: spacing, fontWeight: "bold" }}>
                         This is Jiadi Tao, you might also know me as{" "}
                         <span style={{ display: "inline-block" }}>{
                             name.split("").map((char: string) =>

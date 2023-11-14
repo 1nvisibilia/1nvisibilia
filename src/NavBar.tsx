@@ -10,7 +10,7 @@ export default function NavBar() {
             anime({
                 targets: ".navele",
                 delay: anime.stagger(50),
-                translateY: -100,
+                translateY: [-50, 0],
                 opacity: 1
             });
         }, 1000);
@@ -29,7 +29,7 @@ export default function NavBar() {
 
     return <div ref={navBarRef} style={{
         padding: "0 1em", justifyContent: "space-around", width: "34em",
-        position: "sticky", top: 100, left: 0, textAlign: "left",
+        position: "sticky", top: 0, left: 0, textAlign: "left",
         display: "flex", alignItems: "center"
     }}>
         <Tooltip title="1nvisibilia" arrow>
