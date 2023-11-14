@@ -38,7 +38,7 @@ export default function NavBar() {
             </IconButton>
         </Tooltip>
         <Divider className="navele" orientation="vertical" variant="middle" flexItem />
-        <Tooltip title="What I am" arrow>
+        <Tooltip title="Who I am" arrow>
             <IconButton className="navele" onMouseEnter={() => spinIcon("navitem2")} id="navitem2" size="large">
                 <AccountCircleTwoTone />
             </IconButton>
