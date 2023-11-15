@@ -8,7 +8,7 @@ export default function SectionTitle({ id, titleText }: { id: string, titleText:
             translateX: [400, 0],
             opacity: [0, 1],
             easing: "easeOutExpo",
-            duration: 1200,
+            duration: 500,
             delay: anime.stagger(100)
         })
     }, []);

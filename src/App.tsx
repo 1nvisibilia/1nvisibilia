@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Name from './Name';
 import NavBar from './NavBar';
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -21,6 +21,7 @@ function App() {
                 <div style={{ margin: "0 10em", minWidth: 700 }}>
                     <Name />
                     <Intro />
+                    <div style={{ height: "50vh" }}></div>
                 </div>
             </ThemeProvider>
         </>

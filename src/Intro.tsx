@@ -1,14 +1,21 @@
 import anime from "animejs";
 import React, { useEffect, useState } from "react";
 import SectionTitle from "./SectionTitle";
+import { useInView } from "react-intersection-observer";
 
 const spacing = 10; // px
 const names = ["Bobby Tao...", "invy...", "1nvisibilia...", "taowo..."];
 
-export default function Intro() {
+function IntroContent() {
     const [name, setName] = useState(names[0]);
 
     useEffect(() => {
+        anime({
+            targets: "#mainbody",
+            opacity: [0, 1],
+            duration: 8000
+        });
+
         anime({
             targets: "#avatar",
             rotate: "1turn",
@@ -28,19 +35,19 @@ export default function Intro() {
                     opacity: [0, 1]
                 });
             }, 0);
-        }, 3000);
+        }, 2500);
 
         return () => clearInterval(intervalId);
     }, []);
 
     return (
-        <>
-            <SectionTitle id="whoiam" titleText="Who I am" />
+        <div>
+            <SectionTitle id="whoiam" titleText="「 Who I am 」" />
             <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ padding: "1em" }}>
                     <img id="avatar" style={{ borderRadius: "50%" }} src="./avatar.png" loading="lazy" />
                 </div>
-                <div style={{ padding: "1em" }}>
+                <div id="mainbody" style={{ padding: "1em" }}>
                     <p style={{ marginBottom: spacing, fontWeight: "bold" }}>
                         This is Jiadi Tao, you might also know me as{" "}
                         <span style={{ display: "inline-block" }}>{
@@ -58,6 +65,17 @@ export default function Intro() {
                     </p>
                 </div>
             </div>
-        </>
+        </div>
     );
+}
+
+export default function Intro() {
+    const [introRef, introInView] = useInView({
+        threshold: 0.2
+    });
+
+    return <>
+        <div ref={introRef}></div>
+        {introInView ? <IntroContent /> : null}
+    </>;
 }
