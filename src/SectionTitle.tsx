@@ -9,7 +9,7 @@ export default function SectionTitle({ id, titleText }: { id: string, titleText:
             opacity: [0, 1],
             easing: "easeOutExpo",
             duration: 500,
-            delay: anime.stagger(100)
+            delay: anime.stagger(50)
         })
     }, []);
 

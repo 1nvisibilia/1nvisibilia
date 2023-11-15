@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Name from './Name';
 import NavBar from './NavBar';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Intro from './Intro';
+import Milestone from './Milestone';
 
 const theme = createTheme({
     palette: {
@@ -21,6 +22,7 @@ function App() {
                 <div style={{ margin: "0 10em", minWidth: 700 }}>
                     <Name />
                     <Intro />
+                    <Milestone />
                     <div style={{ height: "50vh" }}></div>
                 </div>
             </ThemeProvider>

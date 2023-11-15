@@ -12,3 +12,7 @@ body,
 .navele {
   opacity: 0;
 }
+
+img {
+  cursor: pointer;
+}

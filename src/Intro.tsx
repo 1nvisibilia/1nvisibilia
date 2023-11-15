@@ -41,7 +41,7 @@ function IntroContent() {
     }, []);
 
     return (
-        <div>
+        <div style={{ marginBottom: "4em" }}>
             <SectionTitle id="whoiam" titleText="「 Who I am 」" />
             <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ padding: "1em" }}>
@@ -70,12 +70,12 @@ function IntroContent() {
 }
 
 export default function Intro() {
-    const [introRef, introInView] = useInView({
+    const [introRef, introInView, entry] = useInView({
         threshold: 0.2
     });
 
     return <>
         <div ref={introRef}></div>
-        {introInView ? <IntroContent /> : null}
+        {(introInView || (entry && entry.boundingClientRect.top < 0)) ? <IntroContent /> : null}
     </>;
 }
