@@ -40,8 +40,15 @@ img {
 .workexplinker {
   width: 2px;
   background-image: linear-gradient(rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+  height: 100%;
+  margin: auto;
 }
 
 .workexperiencerow li {
   margin: 1em 0;
+}
+
+ul {
+  list-style-type: "❖  ";
+  padding-left: 2em;
 }
