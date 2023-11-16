@@ -4,6 +4,8 @@ import NavBar from './NavBar';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Intro from './Intro';
 import Milestone from './Milestone';
+import WorkExperiences from './WorkExperiences';
+import Observable from './utils/Observable';
 
 const theme = createTheme({
     palette: {
@@ -21,8 +23,9 @@ function App() {
                 <NavBar />
                 <div style={{ margin: "0 10em", minWidth: 700 }}>
                     <Name />
-                    <Intro />
-                    <Milestone />
+                    <Observable threshold={0.2}><Intro /></Observable>
+                    <Observable threshold={0.4}><Milestone /></Observable>
+                    <Observable threshold={0.4}><WorkExperiences /></Observable>
                     <div style={{ height: "50vh" }}></div>
                 </div>
             </ThemeProvider>

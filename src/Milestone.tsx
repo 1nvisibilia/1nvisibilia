@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import SectionTitle from "./SectionTitle";
 import anime from "animejs";
 import { Tooltip } from "@mui/material";
 
-function MilestoneContent() {
+export default function MilestoneContent() {
     const gotoSite = (url: string) => {
         window.open(url, '_blank')?.focus();
     }
@@ -37,7 +36,7 @@ function MilestoneContent() {
                 easing: "easeInOutQuad"
             });
     }, []);
-    return <div id="whereamatsection">
+    return <div id="whereamatsection" style={{ marginBottom: "4em" }}>
         <SectionTitle id="whereamat" titleText="「 Where I'm at 」" />
         <div style={{ display: "flex", justifyContent: "space-around", margin: "1em 0" }}>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
@@ -64,15 +63,4 @@ function MilestoneContent() {
             </div>
         </div>
     </div>;
-}
-
-export default function Milestone() {
-    const [introRef, introInView, entry] = useInView({
-        threshold: 0.4
-    });
-
-    return <>
-        <div ref={introRef}></div>
-        {(introInView || (entry && entry.boundingClientRect.top < 0)) ? <MilestoneContent /> : null}
-    </>;
 }

@@ -1,12 +1,11 @@
 import anime from "animejs";
 import React, { useEffect, useState } from "react";
 import SectionTitle from "./SectionTitle";
-import { useInView } from "react-intersection-observer";
 
 const spacing = 10; // px
 const names = ["Bobby Tao...", "invy...", "1nvisibilia...", "taowo..."];
 
-function IntroContent() {
+export default function Intro() {
     const [name, setName] = useState(names[0]);
 
     useEffect(() => {
@@ -67,15 +66,4 @@ function IntroContent() {
             </div>
         </div>
     );
-}
-
-export default function Intro() {
-    const [introRef, introInView, entry] = useInView({
-        threshold: 0.2
-    });
-
-    return <>
-        <div ref={introRef}></div>
-        {(introInView || (entry && entry.boundingClientRect.top < 0)) ? <IntroContent /> : null}
-    </>;
 }
