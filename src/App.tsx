@@ -25,7 +25,7 @@ function App() {
                     <Name />
                     <Observable threshold={0.2}><Intro /></Observable>
                     <Observable threshold={0.4}><Milestone /></Observable>
-                    <Observable threshold={0.4}><WorkExperiences /></Observable>
+                    <WorkExperiences />
                     <div style={{ height: "50vh" }}></div>
                 </div>
             </ThemeProvider>

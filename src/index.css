@@ -16,3 +16,32 @@ body,
 img {
   cursor: pointer;
 }
+
+.workexperiencerow {
+  display: flex;
+}
+
+.workexperiencerow .companylogo {
+  margin: 0 2em;
+}
+
+.workexperiencerow .workinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.workexperiencerow .workinfo>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.workexplinker {
+  width: 2px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black, rgba(0, 0, 0, 0));
+}
+
+.workexperiencerow li {
+  margin: 1em 0;
+}
