@@ -52,3 +52,22 @@ ul {
   list-style-type: "❖  ";
   padding-left: 2em;
 }
+
+#crossleft,
+#crossright {
+  height: 0px;
+  width: 4px;
+  background: black;
+}
+
+.uwdegree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uwdegree > div {
+  font-size: 20px;
+  text-align: center;
+  width: 200px;
+}

@@ -30,7 +30,7 @@ export default function NavBar() {
     return <div ref={navBarRef} style={{
         padding: "0 1em", justifyContent: "space-around", width: "34em",
         position: "sticky", top: 0, left: 0, textAlign: "left",
-        display: "flex", alignItems: "center"
+        display: "flex", alignItems: "center", zIndex: 10
     }}>
         <Tooltip title="1nvisibilia" arrow>
             <IconButton className="navele" onMouseEnter={() => spinIcon("navitem1")} id="navitem1">
@@ -56,7 +56,7 @@ export default function NavBar() {
             </IconButton>
         </Tooltip>
         <Divider className="navele" orientation="vertical" variant="middle" flexItem />
-        <Tooltip title="Where I've learned" arrow>
+        <Tooltip title="What I've learned" arrow>
             <IconButton className="navele" onMouseEnter={() => spinIcon("navitem5")} id="navitem5" size="large">
                 <SchoolTwoTone />
             </IconButton>

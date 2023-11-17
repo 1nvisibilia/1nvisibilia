@@ -198,7 +198,7 @@ function UWExp() {
 }
 
 export default function WorkExperiences() {
-    return <div style={{}}>
+    return <div>
         <Observable threshold={1.0}>
             <SectionTitle id="workexperience" titleText="「 Whom I've worked 」" />
         </Observable>
