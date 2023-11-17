@@ -182,8 +182,7 @@ function UWExp() {
         </div>
         <div className="workexperiencerow">
             <div style={{ minWidth: "164px" }}>
-                <div className="workexplinker lastlinker">
-                </div>
+                <div className="workexplinker"></div>
             </div>
             <div>
                 <ul>

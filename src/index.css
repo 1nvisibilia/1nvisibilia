@@ -52,15 +52,3 @@ ul {
   list-style-type: "❖  ";
   padding-left: 2em;
 }
-
-.workexplinker.lastlinker {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), black);
-}
-
-.lastworknode {
-  width: 16px;
-  height: 16px;
-  background: black;
-  margin: auto;
-  border-radius: 50%;
-}
