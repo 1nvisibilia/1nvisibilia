@@ -85,13 +85,13 @@ function VoiceFormExp() {
     return <div id="voiceform">
         <div className="workexperiencerow">
             <div className="companylogo">
-                <Tooltip arrow title="NimbleRx" placement="left">
+                <Tooltip arrow title="Voiceform" placement="left">
                     <img width={100} src="./voiceform.jpg" style={{ borderRadius: "50%" }}></img>
                 </Tooltip>
             </div>
             <div className="workinfo">
                 <div style={{ fontWeight: "bold" }}>
-                    <div>Full-stack Engineering Intern @ NimbleRx</div>
+                    <div>Full-stack Engineering Intern @ Voiceform</div>
                     <div><em>Sept. 2022 - Dec. 2022</em></div>
                 </div>
                 <div>
@@ -118,6 +118,86 @@ function VoiceFormExp() {
     </div>;
 }
 
+function OpenTextExp() {
+    useEffect(() => {
+        animationSection("opentext");
+    }, []);
+
+    return <div id="opentext">
+        <div className="workexperiencerow">
+            <div className="companylogo">
+                <Tooltip arrow title="OpenText" placement="left">
+                    <img width={100} src="./opentext.jpg" style={{ borderRadius: "50%" }}></img>
+                </Tooltip>
+            </div>
+            <div className="workinfo">
+                <div style={{ fontWeight: "bold" }}>
+                    <div>Software Developer Intern @ OpenText</div>
+                    <div><em>Jan. 2022 - Apr. 2022</em></div>
+                </div>
+                <div>
+                    <div><em>NodeJS • AngularJS • ExpressJS • Manta</em></div>
+                    <div><em>Waterloo, Ontario, Canada</em></div>
+                </div>
+            </div>
+        </div>
+        <div className="workexperiencerow">
+            <div style={{ minWidth: "164px" }}>
+                <div className="workexplinker"></div>
+            </div>
+            <div>
+                <ul>
+                    <li>Improved the data-transfer microservice system that serves
+                        100,000 API requests per day using a scatter-gather design method that
+                        results in a 16 times faster data transfer process.</li>
+                    <li>and more...</li>
+                </ul>
+            </div>
+        </div>
+    </div>;
+}
+
+function UWExp() {
+    useEffect(() => {
+        animationSection("uwexp");
+    }, []);
+
+    return <div id="uwexp">
+        <div className="workexperiencerow">
+            <div className="companylogo">
+                <Tooltip arrow title="U of Waterloo" placement="left">
+                    <img width={100} src="./uwaterloo.png" style={{ borderRadius: "50%" }}></img>
+                </Tooltip>
+            </div>
+            <div className="workinfo">
+                <div style={{ fontWeight: "bold" }}>
+                    <div>Software Developer Intern @ U of Waterloo</div>
+                    <div><em>May. 2021 - Aug. 2021</em></div>
+                </div>
+                <div>
+                    <div><em>Python • PyPandoc • PyQuery</em></div>
+                    <div><em>Waterloo, Ontario, Canada</em></div>
+                </div>
+            </div>
+        </div>
+        <div className="workexperiencerow">
+            <div style={{ minWidth: "164px" }}>
+                <div className="workexplinker lastlinker">
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li>Reduced onlines assessment's question generation time down to less than 5
+                        seconds by writing a python integration tool that automatically generates
+                        assessment contents on the Mobius platform.
+                    </li>
+                    <li>and more...</li>
+                </ul>
+            </div>
+        </div>
+    </div>;
+}
+
 export default function WorkExperiences() {
     return <div style={{}}>
         <Observable threshold={1.0}>
@@ -129,6 +209,12 @@ export default function WorkExperiences() {
         </Observable>
         <Observable threshold={0.7}>
             <VoiceFormExp />
+        </Observable>
+        <Observable threshold={0.7}>
+            <OpenTextExp />
+        </Observable>
+        <Observable threshold={0.7}>
+            <UWExp />
         </Observable>
     </div>
 }
