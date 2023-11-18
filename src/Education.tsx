@@ -47,13 +47,22 @@ export default function Education() {
             opacity: [0, 1],
             duration: 1000
         });
-        anime({
-            targets: ".uwdegree .ais",
-            easing: "easeOutExpo",
-            translateX: [100, 0],
-            opacity: [0, 1],
-            duration: 1000
-        });
+        anime.timeline({})
+            .add({
+                targets: ".uwdegree .ais",
+                easing: "easeOutExpo",
+                translateX: [100, 0],
+                opacity: [0, 1],
+                duration: 1000
+            })
+            .add({
+                targets: ".corecourses > div",
+                translateX: [200, 0],
+                opacity: [0, 1],
+                easing: "easeOutQuad",
+                delay: anime.stagger(100),
+                duration: 500
+            });
     });
 
     return <div style={{ margin: "4em 0" }}>
@@ -70,6 +79,16 @@ export default function Education() {
             <div className="hcs">Honours Computer Science</div>
             <div><AmpSvg /></div>
             <div className="ais">A.I. Specialization</div>
+        </div>
+        <div style={{ fontWeight: "bold", margin: "1em 0" }}>Core courses taken</div>
+        <div className="corecourses">
+            <div>CS451: &ensp;Data-Intensive Distributed Computing</div>
+            <div>CS343: &ensp;Concurrent and Parallel Programming</div>
+            <div>SE380: &ensp;Introduction to Feedback Control</div>
+            <div>ECE358: &ensp;Computer Networks</div>
+            <div>CS246E: &ensp;Object-Oriented Software Development (Enriched)</div>
+            <div>CS241 & CS251: &ensp;Computer Architecture and Compilers</div>
+            <div>CS240 & CS245 & CS341: &ensp;Logics, Data Structures and Algorithms</div>
         </div>
     </div>
 }

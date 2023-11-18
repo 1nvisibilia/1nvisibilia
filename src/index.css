@@ -71,3 +71,7 @@ ul {
   text-align: center;
   width: 200px;
 }
+
+.corecourses > div {
+  margin: 4px 0;
+}
