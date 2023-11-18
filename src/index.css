@@ -72,6 +72,14 @@ ul {
   width: 200px;
 }
 
+.corecourses {
+  margin: 0 2em;
+}
+
 .corecourses > div {
   margin: 4px 0;
+}
+
+.projectname {
+  font-weight: bold;
 }

@@ -80,12 +80,13 @@ export default function Education() {
             <div><AmpSvg /></div>
             <div className="ais">A.I. Specialization</div>
         </div>
-        <div style={{ fontWeight: "bold", margin: "1em 0" }}>Core courses taken</div>
+        <div style={{ fontWeight: "bold", margin: "1em 2em" }}>Core courses taken</div>
         <div className="corecourses">
             <div>CS451: &ensp;Data-Intensive Distributed Computing</div>
             <div>CS343: &ensp;Concurrent and Parallel Programming</div>
             <div>SE380: &ensp;Introduction to Feedback Control</div>
             <div>ECE358: &ensp;Computer Networks</div>
+            <div>CS350: &ensp;Operating Systems</div>
             <div>CS246E: &ensp;Object-Oriented Software Development (Enriched)</div>
             <div>CS241 & CS251: &ensp;Computer Architecture and Compilers</div>
             <div>CS240 & CS245 & CS341: &ensp;Logics, Data Structures and Algorithms</div>
