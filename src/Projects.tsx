@@ -2,10 +2,17 @@ import React, { useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import { IconButton, Tooltip } from "@mui/material";
 import CodeIcon from '@mui/icons-material/Code';
+import anime from "animejs";
 
 export default function Projects() {
     useEffect(() => {
-
+        anime({
+            targets: ".projectname, #projectlist li, .projectdivider",
+            translateX: [100, 0],
+            delay: anime.stagger(100),
+            duration: 1000,
+            opacity: [0, 1]
+        });
     }, []);
 
     const openProject = (paramUrl: string) => {
@@ -18,7 +25,7 @@ export default function Projects() {
             <div style={{ margin: "1em 0" }}>Currently learning K8s and UI animation techniques...</div>
 
             <div>Here are some cool stuffs I did for fun :3</div>
-            <div>
+            <div id="projectlist">
                 <div style={{ margin: "1em 0" }}>
                     <div className="projectname">
                         Cation
@@ -28,7 +35,7 @@ export default function Projects() {
                             </IconButton>
                         </Tooltip>
                     </div>
-                    <ul>
+                    <ul style={{ marginTop: 0 }}>
                         <li>Created a minimalist web music player with Vue, TypeScript, and Firebase SDK,
                             where users can upload and enjoy listening and save their favourite
                             tracks with third-party OAuth sign-ins.</li>
@@ -36,6 +43,7 @@ export default function Projects() {
                             backend data with zero-latency.</li>
                     </ul>
                 </div>
+                <div className="projectdivider"></div>
                 <div>
                     <div className="projectname">
                         Singular
@@ -45,7 +53,7 @@ export default function Projects() {
                             </IconButton>
                         </Tooltip>
                     </div>
-                    <ul>
+                    <ul style={{ marginTop: 0 }}>
                         <li>Developed a real multi-player shooter game with a NodeJS/ExpressJS
                             service that handles game-related APIs and WebSocket events.</li>
                         <li>The server is capable of hosting multiple multi-player game rooms
