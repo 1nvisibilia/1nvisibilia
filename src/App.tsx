@@ -8,6 +8,7 @@ import WorkExperiences from './WorkExperiences';
 import Observable from './utils/Observable';
 import Education from './Education';
 import Projects from "./Projects";
+import Connections from './Connections';
 
 const theme = createTheme({
     palette: {
@@ -30,6 +31,7 @@ function App() {
                     <WorkExperiences />
                     <Observable threshold={0.6}><Education /></Observable>
                     <Observable threshold={0.4}><Projects /></Observable>
+                    <Observable threshold={0.5}><Connections /></Observable>
                     <div style={{ height: "50vh" }}></div>
                 </div>
             </ThemeProvider>

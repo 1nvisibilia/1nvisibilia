@@ -7,7 +7,7 @@ import anime from "animejs";
 export default function Projects() {
     useEffect(() => {
         anime({
-            targets: ".projectname, #projectlist li, .projectdivider",
+            targets: ".projectname, #projectlist li, .projectdivider, .tobecontinued",
             translateX: [100, 0],
             delay: anime.stagger(100),
             duration: 1000,
@@ -61,6 +61,9 @@ export default function Projects() {
                             architecture implementation</li>
                     </ul>
                 </div>
+                <div className="tobecontinued">•</div>
+                <div className="tobecontinued">•</div>
+                <div className="tobecontinued">•</div>
                 {/* <div>
                     <div className="projectname">
                         ASCII Game Engine

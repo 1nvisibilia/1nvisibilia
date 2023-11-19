@@ -91,3 +91,13 @@ ul {
   height: 2px;
   margin: 1em 0;
 }
+
+.tobecontinued {
+  text-align: center;
+}
+
+.talktome{
+  font-size: 46px;
+  opacity: 0.1;
+  text-align: center;
+}
