@@ -26,13 +26,12 @@ function App() {
                 <NavBar />
                 <div style={{ margin: "0 10em", minWidth: 700 }}>
                     <Name />
-                    <Observable threshold={0.2}><Intro /></Observable>
-                    <Observable threshold={0.4}><Milestone /></Observable>
+                    <Observable threshold={0.5} height={247}><Intro /></Observable>
+                    <Observable threshold={0.4} height={304}><Milestone /></Observable>
                     <WorkExperiences />
-                    <Observable threshold={0.6}><Education /></Observable>
-                    <Observable threshold={0.4}><Projects /></Observable>
-                    <Observable threshold={0.5}><Connections /></Observable>
-                    <div style={{ height: "50vh" }}></div>
+                    <Observable threshold={0.6} height={454.4}><Education /></Observable>
+                    <Observable threshold={0.4} height={486}><Projects /></Observable>
+                    <Observable threshold={0.5} height={400}><Connections /></Observable>
                 </div>
             </ThemeProvider>
         </>

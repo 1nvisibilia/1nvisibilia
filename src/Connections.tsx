@@ -53,12 +53,12 @@ export default function Connections() {
                 moveIcon(keys[counter]);
                 ++counter;
             }
-        }, 500);
+        }, 200);
 
         return () => clearInterval(intervalid);
     }, []);
 
-    return <div style={{ marginTop: "6em" }}>
+    return <div style={{ marginTop: "6em", height: "400px" }}>
         <div className="talktome">wanna talk to me?</div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
             <Tooltip title="@taowo" arrow>

@@ -199,20 +199,20 @@ function UWExp() {
 
 export default function WorkExperiences() {
     return <div>
-        <Observable threshold={1.0}>
+        <Observable threshold={1.0} height={41.6}>
             <SectionTitle id="workexperience" titleText="「 Whom I've worked 」" />
         </Observable>
 
-        <Observable threshold={0.7}>
+        <Observable threshold={0.7} height={309.6}>
             <NimbleExp />
         </Observable>
-        <Observable threshold={0.7}>
+        <Observable threshold={0.7} height={290.4}>
             <VoiceFormExp />
         </Observable>
-        <Observable threshold={0.7}>
+        <Observable threshold={0.7} height={233.6}>
             <OpenTextExp />
         </Observable>
-        <Observable threshold={0.7}>
+        <Observable threshold={0.7} height={233.6}>
             <UWExp />
         </Observable>
     </div>
