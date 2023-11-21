@@ -1,5 +1,5 @@
 import anime from "animejs";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export default function SectionTitle({ id, titleText }: { id: string, titleText: string }) {
     useEffect(() => {
