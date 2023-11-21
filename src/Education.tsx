@@ -66,7 +66,7 @@ export default function Education() {
             });
     });
 
-    return <div style={{ margin: "4em 0" }}>
+    return <div style={{ marginTop: "2.5em" }}>
         <SectionTitle id="education" titleText="「 What I've learned 」" />
         <div style={{ display: "flex", justifyContent: "space-evenly", margin: "1em 0" }}>
             <img onClick={() => gotoUrl("https://uwaterloo.ca")} height={100} src="./uwaterloo.png" style={{ padding: "0 38px" }}></img>

@@ -20,7 +20,7 @@ export default function Projects() {
         gotoUrl("https://github.com/1nvisibilia/" + paramUrl);
     }
 
-    return <div>
+    return <div style={{ marginTop: "2.5em" }}>
         <SectionTitle id="projects" titleText="「 What I do 」" />
         <div style={{ margin: "0 2em" }}>
             <div style={{ margin: "1em 0" }}>Currently learning K8s and UI animation techniques...</div>

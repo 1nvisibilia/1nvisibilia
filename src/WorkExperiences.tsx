@@ -199,9 +199,11 @@ function UWExp() {
 }
 
 export default function WorkExperiences() {
-    return <div>
+    return <div style={{ marginTop: "1em" }}>
         <Observable scrollref="workexperience" threshold={1.0} height={41.6}>
-            <SectionTitle id="workexperience" titleText="「 Whom I've worked 」" />
+            <div style={{ paddingTop: "2.5em" }}>
+                <SectionTitle id="workexperience" titleText="「 Whom I've worked 」" />
+            </div>
         </Observable>
 
         <Observable threshold={0.7} height={309.6}>

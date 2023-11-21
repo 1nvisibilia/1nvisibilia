@@ -40,7 +40,7 @@ export default function Intro() {
     }, []);
 
     return (
-        <div style={{ marginBottom: "4em" }}>
+        <div style={{ marginTop: "2.5em" }}>
             <SectionTitle id="whoiam" titleText="「 Who I am 」" />
             <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ padding: "1em" }}>

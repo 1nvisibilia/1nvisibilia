@@ -38,7 +38,7 @@ export default function MilestoneContent() {
                 easing: "easeInOutQuad"
             });
     }, []);
-    return <div id="whereamatsection" style={{ marginBottom: "4em" }}>
+    return <div id="whereamatsection" style={{ marginTop: "2.5em" }}>
         <SectionTitle id="whereamat" titleText="「 Where I'm at 」" />
         <div style={{ display: "flex", justifyContent: "space-around", margin: "1em 0" }}>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
