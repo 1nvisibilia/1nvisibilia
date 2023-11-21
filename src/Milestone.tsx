@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import anime from "animejs";
 import { Tooltip } from "@mui/material";
+import { gotoUrl } from "./utils/url";
 
 export default function MilestoneContent() {
     const gotoSite = (url: string) => {
-        window.open(url, '_blank')?.focus();
+        gotoUrl(url);
     }
+
     useEffect(() => {
         anime.timeline({})
             .add({

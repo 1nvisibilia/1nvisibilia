@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import SectionTitle from "./SectionTitle"
 import anime from "animejs";
 import AmpSvg from "./assets/AmpSvg";
+import { gotoUrl } from "./utils/url";
 
 export default function Education() {
     useEffect(() => {
@@ -68,12 +69,12 @@ export default function Education() {
     return <div style={{ margin: "4em 0" }}>
         <SectionTitle id="education" titleText="「 What I've learned 」" />
         <div style={{ display: "flex", justifyContent: "space-evenly", margin: "1em 0" }}>
-            <img height={100} src="./uwaterloo.png" style={{ padding: "0 38px" }}></img>
+            <img onClick={() => gotoUrl("https://uwaterloo.ca")} height={100} src="./uwaterloo.png" style={{ padding: "0 38px" }}></img>
             <div style={{ width: 100, display: "flex", justifyContent: "space-between" }}>
                 <div id="crossleft"></div>
                 <div id="crossright"></div>
             </div>
-            <img height={100} src="./uwcs.png"></img>
+            <img onClick={() => gotoUrl("https://cs.uwaterloo.ca")} height={100} src="./uwcs.png"></img>
         </div>
         <div className="uwdegree">
             <div className="hcs">Honours Computer Science</div>

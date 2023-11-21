@@ -3,6 +3,7 @@ import SectionTitle from "./SectionTitle";
 import { IconButton, Tooltip } from "@mui/material";
 import CodeIcon from '@mui/icons-material/Code';
 import anime from "animejs";
+import { gotoUrl } from "./utils/url";
 
 export default function Projects() {
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function Projects() {
     }, []);
 
     const openProject = (paramUrl: string) => {
-        window.open("https://github.com/1nvisibilia/" + paramUrl, '_blank')?.focus();
+        gotoUrl("https://github.com/1nvisibilia/" + paramUrl);
     }
 
     return <div>

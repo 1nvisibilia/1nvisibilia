@@ -3,6 +3,7 @@ import SectionTitle from "./SectionTitle";
 import Observable from "./utils/Observable";
 import { Tooltip } from "@mui/material";
 import anime from "animejs";
+import { gotoUrl } from "./utils/url";
 
 function animationSection(id: string) {
     anime.timeline({})
@@ -44,7 +45,7 @@ function NimbleExp() {
         <div className="workexperiencerow">
             <div className="companylogo">
                 <Tooltip arrow title="NimbleRx" placement="left">
-                    <img width={100} src="./nimblerx.jpg" style={{ borderRadius: "50%" }}></img>
+                    <img onClick={() => gotoUrl("https://www.nimblerx.com")} width={100} src="./nimblerx.jpg" style={{ borderRadius: "50%" }}></img>
                 </Tooltip>
             </div>
             <div className="workinfo">
@@ -86,7 +87,7 @@ function VoiceFormExp() {
         <div className="workexperiencerow">
             <div className="companylogo">
                 <Tooltip arrow title="Voiceform" placement="left">
-                    <img width={100} src="./voiceform.jpg" style={{ borderRadius: "50%" }}></img>
+                    <img onClick={() => gotoUrl("https://www.voiceform.com")} width={100} src="./voiceform.jpg" style={{ borderRadius: "50%" }}></img>
                 </Tooltip>
             </div>
             <div className="workinfo">
@@ -127,7 +128,7 @@ function OpenTextExp() {
         <div className="workexperiencerow">
             <div className="companylogo">
                 <Tooltip arrow title="OpenText" placement="left">
-                    <img width={100} src="./opentext.jpg" style={{ borderRadius: "50%" }}></img>
+                    <img onClick={() => gotoUrl("https://www.opentext.com")} width={100} src="./opentext.jpg" style={{ borderRadius: "50%" }}></img>
                 </Tooltip>
             </div>
             <div className="workinfo">
@@ -166,7 +167,7 @@ function UWExp() {
         <div className="workexperiencerow">
             <div className="companylogo">
                 <Tooltip arrow title="U of Waterloo" placement="left">
-                    <img width={100} src="./uwaterloo.png" style={{ borderRadius: "50%" }}></img>
+                    <img onClick={() => gotoUrl("https://uwaterloo.ca")} width={100} src="./uwaterloo.png" style={{ borderRadius: "50%" }}></img>
                 </Tooltip>
             </div>
             <div className="workinfo">
