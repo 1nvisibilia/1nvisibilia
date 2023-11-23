@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import { detectMob } from './utils/viewport.tsx';
 
-if (typeof screen.orientation === "string" && screen.orientation !== "undefined") {
+if (detectMob()) {
   alert("This site is best viewed on desktop browser, or mobile with desktop view!");
 }
 
