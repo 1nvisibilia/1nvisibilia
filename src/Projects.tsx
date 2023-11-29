@@ -1,9 +1,19 @@
 import React, { useEffect } from "react";
 import SectionTitle from "./SectionTitle";
-import { IconButton, Tooltip } from "@mui/material";
+import { IconButton, Tooltip, useTheme } from "@mui/material";
 import CodeIcon from '@mui/icons-material/Code';
 import anime from "animejs";
 import { gotoUrl } from "./utils/url";
+
+function Divider() {
+    const theme = useTheme();
+
+    return <div className="projectdivider" style={{
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0),
+        ${theme.palette.primary.main === "#000000" ? "black" : "white"},
+        rgba(0, 0, 0, 0))`
+    }}></div>
+}
 
 export default function Projects() {
     useEffect(() => {
@@ -32,7 +42,7 @@ export default function Projects() {
                         Cation
                         <Tooltip title="/1nvisibilia/cation" arrow placement="right">
                             <IconButton size="small" onClick={() => openProject("cation")}>
-                                <CodeIcon />
+                                <CodeIcon color="primary" />
                             </IconButton>
                         </Tooltip>
                     </div>
@@ -44,13 +54,13 @@ export default function Projects() {
                             backend data with zero-latency.</li>
                     </ul>
                 </div>
-                <div className="projectdivider"></div>
+                <Divider />
                 <div>
                     <div className="projectname">
                         Singular
                         <Tooltip title="/1nvisibilia/singular-backend" arrow placement="right">
                             <IconButton size="small" onClick={() => openProject("singular-backend")}>
-                                <CodeIcon />
+                                <CodeIcon color="primary" />
                             </IconButton>
                         </Tooltip>
                     </div>

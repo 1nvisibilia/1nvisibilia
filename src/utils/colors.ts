@@ -7,6 +7,9 @@ const lightTheme = createTheme({
         },
         background: {
             default: "#eeece6"
+        },
+        text: {
+            primary: "#000000"
         }
     },
 });
@@ -18,6 +21,9 @@ const darkTheme = createTheme({
         },
         background: {
             default: "#333333"
+        },
+        text: {
+            primary: "#ffffff"
         }
     },
     components: {

@@ -1,9 +1,19 @@
 import React, { useEffect } from "react";
 import SectionTitle from "./SectionTitle";
 import Observable from "./utils/Observable";
-import { Tooltip } from "@mui/material";
+import { Tooltip, useTheme } from "@mui/material";
 import anime from "animejs";
 import { gotoUrl } from "./utils/url";
+
+function Divider() {
+    const theme = useTheme();
+
+    return <div className="workexplinker" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0),
+        ${theme.palette.primary.main === "#000000" ? "black" : "white"},
+        rgba(0, 0, 0, 0))`
+    }}></div>
+}
 
 function animationSection(id: string) {
     anime.timeline({})
@@ -61,7 +71,7 @@ function NimbleExp() {
         </div>
         <div className="workexperiencerow">
             <div style={{ minWidth: "164px" }}>
-                <div className="workexplinker"></div>
+                <Divider />
             </div>
             <div>
                 <ul>
@@ -103,7 +113,7 @@ function VoiceFormExp() {
         </div>
         <div className="workexperiencerow">
             <div style={{ minWidth: "164px" }}>
-                <div className="workexplinker"></div>
+                <Divider />
             </div>
             <div>
                 <ul>
@@ -144,7 +154,7 @@ function OpenTextExp() {
         </div>
         <div className="workexperiencerow">
             <div style={{ minWidth: "164px" }}>
-                <div className="workexplinker"></div>
+                <Divider />
             </div>
             <div>
                 <ul>
@@ -183,7 +193,7 @@ function UWExp() {
         </div>
         <div className="workexperiencerow">
             <div style={{ minWidth: "164px" }}>
-                <div className="workexplinker"></div>
+                <Divider />
             </div>
             <div>
                 <ul>
