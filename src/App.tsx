@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Name from './Name';
-import NavBar from './NavBar';
-import { createTheme, ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import Intro from './Intro';
 import Milestone from './Milestone';
 import WorkExperiences from './WorkExperiences';
@@ -9,21 +8,28 @@ import Observable from './utils/Observable';
 import Education from './Education';
 import Projects from "./Projects";
 import Connections from './Connections';
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#000000"
-        },
-    },
-});
+import { ThemeType } from './LightBulb';
+import { Theme } from '@emotion/react';
+import Header from './Header';
+import { lightTheme, darkTheme } from './utils/colors';
 
 
 function App() {
+    const [theme, setTheme] = useState<Theme>(lightTheme);
+
+    const switchTheme = (type: ThemeType) => {
+        if (type === "dark") {
+            setTheme(darkTheme);
+        } else {
+            setTheme(lightTheme);
+        }
+    }
+
     return (
         <>
             <ThemeProvider theme={theme}>
-                <NavBar />
+                <CssBaseline />
+                <Header switchTheme={switchTheme} />
                 <div style={{ margin: "0 10em", minWidth: 700 }}>
                     <Name />
                     <Observable scrollref="intro" threshold={0.5} height={247}><Intro /></Observable>
