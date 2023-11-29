@@ -1,10 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import SectionTitle from "./SectionTitle"
 import anime from "animejs";
 import AmpSvg from "./assets/AmpSvg";
 import { gotoUrl } from "./utils/url";
+import { useTheme } from "@mui/material";
 
 export default function Education() {
+    const theme = useTheme();
+
     useEffect(() => {
         anime.timeline({})
             .add({
@@ -64,15 +67,15 @@ export default function Education() {
                 delay: anime.stagger(100),
                 duration: 500
             });
-    });
+    }, []);
 
     return <div style={{ marginTop: "2.5em" }}>
         <SectionTitle id="education" titleText="「 What I've learned 」" />
         <div style={{ display: "flex", justifyContent: "space-evenly", margin: "1em 0" }}>
             <img onClick={() => gotoUrl("https://uwaterloo.ca")} height={100} src="./uwaterloo.png" style={{ padding: "0 38px" }}></img>
             <div style={{ width: 100, display: "flex", justifyContent: "space-between" }}>
-                <div id="crossleft"></div>
-                <div id="crossright"></div>
+                <div id="crossleft" style={{ backgroundColor: theme.palette.primary.main === "#000000" ? "black" : "white" }}></div>
+                <div id="crossright" style={{ backgroundColor: theme.palette.primary.main === "#000000" ? "black" : "white" }}></div>
             </div>
             <img onClick={() => gotoUrl("https://cs.uwaterloo.ca")} height={100} src="./uwcs.png"></img>
         </div>
