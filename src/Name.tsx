@@ -17,8 +17,7 @@ export default function Name() {
     useEffect(() => { drawSvg(); }, []);
 
     return <div style={{
-        textAlign: "center", height: "calc(100vh - 48px)",
-        display: "grid", marginBottom: "2em"
+        textAlign: "center", height: "calc(100vh - 48px)", display: "grid"
     }}>
         <Animation />
     </div>;
