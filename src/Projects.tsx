@@ -39,6 +39,22 @@ export default function Projects() {
             <div id="projectlist">
                 <div style={{ margin: "1em 0" }}>
                     <div className="projectname">
+                        Regression
+                        <Tooltip title="/1nvisibilia/cation" arrow placement="right">
+                            <IconButton size="small" onClick={() => openProject("regression")}>
+                                <CodeIcon color="primary" />
+                            </IconButton>
+                        </Tooltip>
+                    </div>
+                    <ul style={{ marginTop: 0 }}>
+                        <li>Developed a 97% accuracy neural network model with PyTorch to predict real-time stock data.</li>
+                        <li>Leveraged Apache Kafka to pull 20,000+ stock records from Yahoo API to
+                            continuously train the model with real-time Kafka consumers.</li>
+                    </ul>
+                </div>
+                <Divider />
+                <div style={{ margin: "1em 0" }}>
+                    <div className="projectname">
                         Cation
                         <Tooltip title="/1nvisibilia/cation" arrow placement="right">
                             <IconButton size="small" onClick={() => openProject("cation")}>
@@ -48,10 +64,8 @@ export default function Projects() {
                     </div>
                     <ul style={{ marginTop: 0 }}>
                         <li>Created a minimalist web music player with Vue, TypeScript, and Firebase SDK,
-                            where users can upload and enjoy listening and save their favourite
-                            tracks with third-party OAuth sign-ins.</li>
-                        <li>Adapted Firebase's real-time database to sync-up user's the UIs and
-                            backend data with zero-latency.</li>
+                            where users can upload and enjoy
+                            listening and save their favourite tracks with third-party OAuth sign-ins.</li>
                     </ul>
                 </div>
                 <Divider />
@@ -65,31 +79,14 @@ export default function Projects() {
                         </Tooltip>
                     </div>
                     <ul style={{ marginTop: 0 }}>
-                        <li>Developed a real multi-player shooter game with a NodeJS/ExpressJS
-                            service that handles game-related APIs and WebSocket events.</li>
-                        <li>The server is capable of hosting multiple multi-player game rooms
-                            while keeping the UI and sockets in sync with the server authority
-                            architecture implementation</li>
+                        <li>Developed a real multi-player shooter game with a NodeJS service that
+                            handles game-related APIs and WebSocket events with the server
+                            authority architecture</li>
                     </ul>
                 </div>
                 <div className="tobecontinued">•</div>
                 <div className="tobecontinued">•</div>
                 <div className="tobecontinued">•</div>
-                {/* <div>
-                    <div className="projectname">
-                        ASCII Game Engine
-                        <Tooltip title="/1nvisibilia/singular-backend" arrow placement="right">
-                            <IconButton size="small">
-                                <CodeIcon />
-                            </IconButton>
-                        </Tooltip>
-                    </div>
-                    <ul>
-                        <li>Engineered a real-time console game engine in C++17, adapting object
-                            oriented architecture, SOLID principles, and MVC framework.
-                        </li>
-                    </ul>
-                </div> */}
             </div>
         </div>
     </div>
