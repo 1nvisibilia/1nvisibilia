@@ -42,25 +42,25 @@ export default function MilestoneContent() {
         <SectionTitle id="whereamat" titleText="「 Where I'm at 」" />
         <div style={{ display: "flex", justifyContent: "space-around", margin: "1em 0" }}>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
-                <div className="summary">Studying my 3B Term of Computer Science @</div>
+                <div className="summary">Studying my 4A Term of Computer Science @</div>
                 <Tooltip title="University of Waterloo" arrow>
                     <img onClick={() => gotoSite("https://cs.uwaterloo.ca")} style={{ margin: "2em", borderRadius: "50%" }} width={100} src="./uwaterloo.png"></img>
                 </Tooltip>
                 <div>
                     <strong style={{ display: "inline-block" }}>Focusing on</strong>
                     <br /><br />
-                    <em style={{ display: "inline-block" }}>Big Data • Concurrency • Feedback Systems</em>
+                    <em style={{ display: "inline-block" }}>Big Data • Concurrency • System Security</em>
                 </div>
             </div>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
-                <div className="summary">Incoming Backend Engineering Intern @</div>
+                <div className="summary">DevOps Engineering Intern @</div>
                 <Tooltip title="Shakudo" arrow>
                     <img onClick={() => gotoSite("https://shakudo.io")} style={{ margin: "2em", borderRadius: "50%" }} width={100} src="./shakudo.jpg"></img>
                 </Tooltip>
                 <div>
                     <strong style={{ display: "inline-block" }}>Developing on</strong>
                     <br /><br />
-                    <em style={{ display: "inline-block" }}>Kubernetes • Terraform</em>
+                    <em style={{ display: "inline-block" }}>Kubernetes • Helm • Azure • GCP</em>
                 </div>
             </div>
         </div>

@@ -46,6 +46,48 @@ function animationSection(id: string) {
         });
 }
 
+function ShakudoExp() {
+    useEffect(() => {
+        animationSection("shakudo");
+    }, []);
+
+    return <div id="shakudo">
+        <div className="workexperiencerow">
+            <div className="companylogo">
+                <Tooltip arrow title="Shakudo" placement="left">
+                    <img onClick={() => gotoUrl("https://shakudo.io")} width={100} src="./shakudo.jpg" style={{ borderRadius: "50%" }}></img>
+                </Tooltip>
+            </div>
+            <div className="workinfo">
+                <div style={{ fontWeight: "bold" }}>
+                    <div>DevOps Engineering Intern @ Shakudo</div>
+                    <div><em>Jan. 2024 - Apr. 2024</em></div>
+                </div>
+                <div>
+                    <div><em>Kubernetes • Helm • TypeScript • GraphQL • Supabase • Azure • GCP</em></div>
+                    <div><em>Toronto, Ontario, Canada</em></div>
+                </div>
+            </div>
+        </div>
+        <div className="workexperiencerow">
+            <div style={{ minWidth: "164px" }}>
+                <Divider />
+            </div>
+            <div>
+                <ul>
+                    <li>Installed Nvidia GPU Metrics Data Exporter to Prometheus and built a
+                        Kubernetes resource autoscaling feature on all microservices running on GPU
+                        nodes in the cluster.</li>
+                    <li>Developed a full-stack service for building Docker images as a Kubernetes job
+                        through Kaniko and uploading image build requests and artifacts to Harbor registry
+                        for viewing, pulling, and pushing.</li>
+                    <li>and more...</li>
+                </ul>
+            </div>
+        </div>
+    </div>;
+}
+
 function NimbleExp() {
     useEffect(() => {
         animationSection("nimblerx");
@@ -217,6 +259,9 @@ export default function WorkExperiences() {
         </Observable>
 
         <Observable threshold={0.7} height={309.6}>
+            <ShakudoExp />
+        </Observable>
+        <Observable threshold={0.7} height={290.4}>
             <NimbleExp />
         </Observable>
         <Observable threshold={0.7} height={290.4}>

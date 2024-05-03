@@ -57,10 +57,10 @@ export default function Intro() {
                     </p>
                     <p style={{ marginBottom: spacing }}>
                         I am a senior computer science student @ University of Waterloo, specializing
-                        in Big Data, Concurrency, and Feedback Control Systems.
+                        in Big Data, Concurrency, and System Security.
                     </p>
                     <p style={{ marginBottom: spacing }}>
-                        I also worked at NimbleRx, Voiceform, OpenText, and my own uni :D
+                        I also worked at Shakudo, NimbleRx, Voiceform, OpenText, and my own uni :D
                     </p>
                 </div>
             </div>
