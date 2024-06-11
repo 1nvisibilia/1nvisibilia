@@ -3,10 +3,10 @@
 #### I am Bobby Tao (though you might also know me as invy).
 
 
-I'm a third year university student at the University of Waterloo
+I'm a third-year university student at the University of Waterloo
 majoring in computer science and looking for 2024 internships!
 
-Currently learning Kubernetes^^
+Currently grinding Capture the Flags(CTFs)^^
 
 [taowo.space](https://taowo.space/)
 
