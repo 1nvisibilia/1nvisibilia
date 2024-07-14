@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react"
+import React, { useEffect } from "react"
 import SectionTitle from "./SectionTitle"
 import anime from "animejs";
 import AmpSvg from "./assets/AmpSvg";
@@ -86,6 +86,7 @@ export default function Education() {
         </div>
         <div style={{ fontWeight: "bold", margin: "1em 2em" }}>Core courses taken</div>
         <div className="corecourses">
+            <div>CS453 & CS459: &ensp;Cryptography and Software Security</div>
             <div>CS451: &ensp;Data-Intensive Distributed Computing</div>
             <div>CS343: &ensp;Concurrent and Parallel Programming</div>
             <div>SE380: &ensp;Introduction to Feedback Control</div>

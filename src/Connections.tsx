@@ -79,7 +79,7 @@ export default function Connections() {
         }, 200);
 
         return () => clearInterval(intervalid);
-    }, []);
+    }, [moveIcon]);
 
     return <div style={{ height: "400px", overflow: "hidden" }}>
         <div className="talktome">wanna talk to me?</div>

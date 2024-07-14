@@ -44,23 +44,23 @@ export default function MilestoneContent() {
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
                 <div className="summary">Studying my 4A Term of Computer Science @</div>
                 <Tooltip title="University of Waterloo" arrow>
-                    <img onClick={() => gotoSite("https://cs.uwaterloo.ca")} style={{ margin: "2em", borderRadius: "50%" }} width={100} src="./uwaterloo.png"></img>
+                    <img onClick={() => gotoSite("https://cs.uwaterloo.ca")} style={{ margin: "2em" }} width={100} src="./uwaterloo.png"></img>
                 </Tooltip>
                 <div>
                     <strong style={{ display: "inline-block" }}>Focusing on</strong>
                     <br /><br />
-                    <em style={{ display: "inline-block" }}>Big Data • Concurrency • System Security</em>
+                    <em style={{ display: "inline-block" }}>Computer Network • Concurrency • System Security</em>
                 </div>
             </div>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
-                <div className="summary">DevOps Engineering Intern @</div>
-                <Tooltip title="Shakudo" arrow>
-                    <img onClick={() => gotoSite("https://shakudo.io")} style={{ margin: "2em", borderRadius: "50%" }} width={100} src="./shakudo.jpg"></img>
+                <div className="summary">Incoming SWE Intern @</div>
+                <Tooltip title="Cloudflare" arrow>
+                    <img onClick={() => gotoSite("https://cloudflare.com")} style={{ margin: "2em" }} width={100} src="./cloudflare.png"></img>
                 </Tooltip>
                 <div>
                     <strong style={{ display: "inline-block" }}>Developing on</strong>
                     <br /><br />
-                    <em style={{ display: "inline-block" }}>Kubernetes • Helm • Azure • GCP</em>
+                    <em style={{ display: "inline-block" }}>Golang • React • Telemetry</em>
                 </div>
             </div>
         </div>

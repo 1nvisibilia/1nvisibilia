@@ -11,7 +11,7 @@ export default function SectionTitle({ id, titleText }: { id: string, titleText:
             duration: 500,
             delay: anime.stagger(50)
         })
-    }, []);
+    }, [id]);
 
     return <div style={{ fontSize: "2em" }} id={id}>
         {titleText.split("").map((char: string) =>
