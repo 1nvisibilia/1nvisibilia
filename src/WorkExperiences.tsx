@@ -46,6 +46,51 @@ function animationSection(id: string) {
         });
 }
 
+function CloudflareExp() {
+    useEffect(() => {
+        animationSection("cloudflare");
+    }, []);
+
+    return <div id="cloudflare">
+        <div className="workexperiencerow">
+            <div className="companylogo">
+                <Tooltip arrow title="Cloudflare" placement="left">
+                    <img onClick={() => gotoUrl("https://cloudflare.com")} width={100} src="./cloudflare.png" /* style={{ borderRadius: "50%" }} */></img>
+                </Tooltip>
+            </div>
+            <div className="workinfo">
+                <div style={{ fontWeight: "bold" }}>
+                    <div>Software Engineering Intern @ Cloudflare</div>
+                    <div><em>Sept. 2024 - Dec. 2024</em></div>
+                </div>
+                <div>
+                    <div><em>Rust • Kubernetes • TypeScript • Terraform • React</em></div>
+                    <div><em>San Francisco, California, United States</em></div>
+                </div>
+            </div>
+        </div>
+        <div className="workexperiencerow">
+            <div style={{ minWidth: "164px" }}>
+                <Divider />
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        Designed, implemented, provisioned, and deployed a cron-job pipeline service to
+                        collect and aggregate more than 5000 network connect locations from various sources
+                        into a unified database, along with an API and UI search engine on top of the database
+                        for complex query and data retrievals.
+                    </li>
+                    <li>
+                        Coded up a cron-job data data linter for geo-spatial metadata of Cloudflare edge servers
+                        to automatically format address and geocode by leveraging Google Maps API.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>;
+}
+
 function ShakudoExp() {
     useEffect(() => {
         animationSection("shakudo");
@@ -256,6 +301,10 @@ export default function WorkExperiences() {
             <div style={{ paddingTop: "2.5em" }}>
                 <SectionTitle id="workexperience" titleText="「 Whom I've worked 」" />
             </div>
+        </Observable>
+
+        <Observable threshold={0.7} height={309.6}>
+            <CloudflareExp />
         </Observable>
 
         <Observable threshold={0.7} height={309.6}>

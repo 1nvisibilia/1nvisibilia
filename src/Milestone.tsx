@@ -42,7 +42,7 @@ export default function MilestoneContent() {
         <SectionTitle id="whereamat" titleText="「 Where I'm at 」" />
         <div style={{ display: "flex", justifyContent: "space-around", margin: "1em 0" }}>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
-                <div className="summary">Studying my 4A Term of Computer Science @</div>
+                <div className="summary">Studying my 4B Term of Computer Science @</div>
                 <Tooltip title="University of Waterloo" arrow>
                     <img onClick={() => gotoSite("https://cs.uwaterloo.ca")} style={{ margin: "2em" }} width={100} src="./uwaterloo.png"></img>
                 </Tooltip>
@@ -53,14 +53,14 @@ export default function MilestoneContent() {
                 </div>
             </div>
             <div style={{ textAlign: "center", flex: "1 1 0" }}>
-                <div className="summary">Incoming SWE Intern @</div>
-                <Tooltip title="Cloudflare" arrow>
-                    <img onClick={() => gotoSite("https://cloudflare.com")} style={{ margin: "2em" }} width={100} src="./cloudflare.png"></img>
+                <div className="summary">Incoming SWE @</div>
+                <Tooltip title="Moveworks" arrow>
+                    <img onClick={() => gotoSite("https://www.moveworks.com")} style={{ margin: "2em" }} width={100} src="./moveworks.svg"></img>
                 </Tooltip>
                 <div>
                     <strong style={{ display: "inline-block" }}>Developing on</strong>
                     <br /><br />
-                    <em style={{ display: "inline-block" }}>Golang • React • Telemetry</em>
+                    <em style={{ display: "inline-block" }}>Python • Go • Apache Kafka</em>
                 </div>
             </div>
         </div>
